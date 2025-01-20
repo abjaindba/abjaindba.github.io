@@ -158,6 +158,22 @@
             margin-top: 3rem;
         }
 
+        .download-cv-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-cv-button:hover {
+            background-color: darken(var(--accent-color), 10%);
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 2rem 1rem;
@@ -180,6 +196,7 @@
 <body>
     <header>
         <div class="container">
+            <a href="/Abhishek_Jain_dba_Dealersocket.pdf" class="download-cv-button" download>Download CV</a>
             <div class="profile-image">👨‍💻</div>
             <h1>Abhishek Jain</h1>
             <p class="title">Database Administrator | DevOps Specialist | Big Data Expert</p>
@@ -262,7 +279,7 @@
     </main>
 
     <footer>
-        <p>© 2025 Abhishek Jain | All Rights Reserved</p>
+        <p> 2025 Abhishek Jain | All Rights Reserved</p>
     </footer>
 </body>
 </html>
