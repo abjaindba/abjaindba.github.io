@@ -272,6 +272,23 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        @keyframes moveLeftToRight {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+        @keyframes moveRightToLeft {
+            0% { transform: translateX(100vw); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(-100%); opacity: 0; }
+        }
+        .moving-string {
+            position: absolute;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 2rem 1rem;
@@ -304,28 +321,16 @@
                 <a href="https://github.com/abjaindba" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <div class="falling-string" style="left: 5%; animation-delay: 0s;">PostgreSQL</div>
-        <div class="falling-string" style="left: 10%; animation-delay: 1s;">Oracle DB</div>
-        <div class="falling-string" style="left: 15%; animation-delay: 2s;">MySQL/MariaDB</div>
-        <div class="falling-string" style="left: 20%; animation-delay: 3s;">AWS RDS</div>
-        <div class="falling-string" style="left: 25%; animation-delay: 4s;">MongoDB</div>
-        <div class="falling-string" style="left: 30%; animation-delay: 5s;">Docker</div>
-        <div class="falling-string" style="left: 35%; animation-delay: 6s;">Kubernetes</div>
-        <div class="falling-string" style="left: 40%; animation-delay: 7s;">Terraform</div>
-        <div class="falling-string" style="left: 45%; animation-delay: 8s;">Ansible</div>
-        <div class="falling-string" style="left: 50%; animation-delay: 9s;">Grafana</div>
-        <div class="falling-string" style="left: 55%; animation-delay: 10s;">Oracle RAC</div>
-        <div class="falling-string" style="left: 60%; animation-delay: 11s;">Red Hat Linux</div>
-        <div class="falling-string" style="left: 65%; animation-delay: 12s;">VMware</div>
-        <div class="falling-string" style="left: 70%; animation-delay: 13s;">AWS EC2</div>
-        <div class="falling-string" style="left: 75%; animation-delay: 14s;">CI/CD</div>
-        <div class="falling-string" style="left: 80%; animation-delay: 15s;">Security</div>
-        <div class="falling-string" style="left: 85%; animation-delay: 16s;">Monitoring</div>
-        <div class="falling-string" style="left: 90%; animation-delay: 17s;">Data Warehousing</div>
-        <div class="falling-string" style="left: 95%; animation-delay: 18s;">Cloud Platforms</div>
-        <img src="path/to/aws-logo.png" class="falling-logo" style="left: 10%; animation-delay: 2s;" alt="AWS Logo">
-        <img src="path/to/docker-logo.png" class="falling-logo" style="left: 30%; animation-delay: 4s;" alt="Docker Logo">
-        <img src="path/to/jenkins-logo.png" class="falling-logo" style="left: 50%; animation-delay: 6s;" alt="Jenkins Logo">
+        <div class="moving-string" style="top: 5%; animation: moveLeftToRight 15s linear infinite;">RDBMS Databases: Oracle 11g, 12c, PostgreSQL, MySQL/MariaDB, AWS RDS (Oracle, MariaDB, Postgres)</div>
+        <div class="moving-string" style="top: 15%; animation: moveRightToLeft 18s linear infinite;">No-SQL Databases: MongoDB, Amazon DynamoDB, Cassandra (Basics), Elasticsearch</div>
+        <div class="moving-string" style="top: 25%; animation: moveLeftToRight 20s linear infinite;">Database High Availability: PGpool, Oracle RAC, MongoDB replica Set, Oracle Standby Databases, F5, MySQL/MariaDB Master-Master, Master-Slave Replication, PostgreSQL Streaming replication</div>
+        <div class="moving-string" style="top: 35%; animation: moveRightToLeft 22s linear infinite;">Operating System: Red Hat Enterprise Linux, CentOS, Oracle Linux, Solaris, Ubuntu</div>
+        <div class="moving-string" style="top: 45%; animation: moveLeftToRight 25s linear infinite;">Oracle Application: Oracle EBS 11i, EBS 12.1.3, EBS</div>
+        <div class="moving-string" style="top: 55%; animation: moveRightToLeft 17s linear infinite;">AWS: EC2, S3, RDS, VPC, IAM, EBS, Cloud watch, Security groups, ELB (Load balancers), NAT, Route53, Database Migration</div>
+        <div class="moving-string" style="top: 65%; animation: moveLeftToRight 19s linear infinite;">DevOPS Tools: Jenkins, git, Puppet, Ansible, bitbucket</div>
+        <div class="moving-string" style="top: 75%; animation: moveRightToLeft 21s linear infinite;">Database Migration: Ora2pg for oracle to PostgreSQL, AWS DMS, Database Pump, Oracle Standby Database, AWS DMS /Schema conversion</div>
+        <div class="moving-string" style="top: 85%; animation: moveLeftToRight 23s linear infinite;">Infrastructure as Code (IaC): Terraform, Ansible</div>
+        <div class="moving-string" style="top: 95%; animation: moveRightToLeft 26s linear infinite;">Monitoring Tool: ELK, Emite, BMC Petrol, Oracle Grid control, Nagios, Grafana, Prometheus, MongoDB mms, Percona PMM</div>
     </header>
 
     <main class="container">
