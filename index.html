@@ -35,6 +35,37 @@
             text-align: center;
         }
 
+        .hero {
+            background: linear-gradient(270deg, #2c3e50, #3498db, #e74c3c, #9b59b6);
+            background-size: 800% 800%;
+            animation: gradientBackground 20s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 50%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fallingStrings {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        .falling-string {
+            position: absolute;
+            top: 0;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+            animation: fallingStrings 15s linear infinite;
+        }
+
         .profile-image {
             width: 150px;
             height: 150px;
@@ -174,23 +205,63 @@
             background-color: darken(var(--accent-color), 10%);
         }
 
+        .card {
+            background-color: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
         .experience-table {
             display: table;
             width: 100%;
             margin: 1rem 0;
             border-collapse: collapse;
         }
+
         .experience-row {
             display: table-row;
         }
+
         .experience-cell {
             display: table-cell;
             padding: 0.5rem;
             border-bottom: 1px solid #ccc;
         }
+
         .experience-row.header .experience-cell {
             font-weight: bold;
             background-color: #f5f6fa;
+        }
+
+        .skill-card {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .certifications-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .certifications-list li {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -213,50 +284,129 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="hero">
         <div class="container">
             <a href="/Abhishek_Jain_dba_Dealersocket.pdf" class="download-cv-button" download>Download CV</a>
             <div class="profile-image">👨‍💻</div>
             <h1>Abhishek Jain</h1>
-            <p class="title">Database Administrator | DevOps Specialist | Big Data Expert</p>
+            <p class="title">Database Administrator (DBA) | DevOps  | Database Site Reliability Engineering (DBRE) | Cloud </p>
             <div class="social-links">
                 <a href="mailto:abjaindba@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/abhishek-k-jain" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/abjaindba" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
+        <div class="falling-string" style="left: 5%; animation-delay: 0s;">Oracle 11g, 12c</div>
+        <div class="falling-string" style="left: 10%; animation-delay: 1s;">PostgreSQL</div>
+        <div class="falling-string" style="left: 15%; animation-delay: 2s;">MySQL/MariaDB</div>
+        <div class="falling-string" style="left: 20%; animation-delay: 3s;">AWS RDS</div>
+        <div class="falling-string" style="left: 25%; animation-delay: 4s;">MongoDB</div>
+        <div class="falling-string" style="left: 30%; animation-delay: 5s;">Docker</div>
+        <div class="falling-string" style="left: 35%; animation-delay: 6s;">Kubernetes</div>
+        <div class="falling-string" style="left: 40%; animation-delay: 7s;">Terraform</div>
+        <div class="falling-string" style="left: 45%; animation-delay: 8s;">Ansible</div>
+        <div class="falling-string" style="left: 50%; animation-delay: 9s;">Grafana</div>
+        <div class="falling-string" style="left: 55%; animation-delay: 10s;">Oracle RAC</div>
+        <div class="falling-string" style="left: 60%; animation-delay: 11s;">Red Hat Linux</div>
+        <div class="falling-string" style="left: 65%; animation-delay: 12s;">VMware</div>
+        <div class="falling-string" style="left: 70%; animation-delay: 13s;">AWS EC2</div>
+        <div class="falling-string" style="left: 75%; animation-delay: 14s;">CI/CD</div>
+        <div class="falling-string" style="left: 80%; animation-delay: 15s;">Security</div>
+        <div class="falling-string" style="left: 85%; animation-delay: 16s;">Monitoring</div>
+        <div class="falling-string" style="left: 90%; animation-delay: 17s;">Data Warehousing</div>
+        <div class="falling-string" style="left: 95%; animation-delay: 18s;">Cloud Platforms</div>
     </header>
 
     <main class="container">
         <section class="section">
-            <h2>Professional Summary</h2>
+            <h2><i class="fas fa-briefcase"></i> Professional Summary</h2>
             <p>A highly competent and result-oriented IT professional with 15+ years of expertise in Database Administration, DevOps, and the Big Data ecosystem. Currently working as Principal DBRE at DealerSocket, managing open-source databases including PostgreSQL, MySQL, MongoDB, and Elasticsearch, along with AWS RDS and DevOps tools. Specializes in implementing automation and DevOps practices to optimize workflows and save DBA hours.</p>
         </section>
 
-        <section class="section">
-            <h2>Technical Expertise</h2>
+        <section class="card" id="technical-expertise">
+            <h2><i class="fas fa-cogs"></i> Technical Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <p>Oracle, PostgreSQL, MySQL/MariaDB, MongoDB, AWS RDS</p>
+                <div class="skill-card">
+                    <h3>RDBMS Databases</h3>
+                    <p>Oracle 11g, 12c, PostgreSQL, MySQL/MariaDB, AWS RDS (Oracle, MariaDB, Postgres)</p>
                 </div>
-                <div class="skill-category">
-                    <h3>DevOps Tools</h3>
-                    <p>Jenkins, Puppet, Ansible, Terraform</p>
+                <div class="skill-card">
+                    <h3>No-SQL Databases</h3>
+                    <p>MongoDB, Amazon DynamoDB, Cassandra (Basics), Elasticsearch</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Cloud Platforms</h3>
-                    <p>AWS (EC2, S3, RDS, IAM), Red Hat Virtualization</p>
+                <div class="skill-card">
+                    <h3>Database High Availability</h3>
+                    <p>PGpool, Oracle RAC, MongoDB replica Set, Oracle Standby Databases, F5, MySQL/MariaDB Master-Master, Master-Slave Replication, PostgreSQL Streaming replication</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Monitoring</h3>
-                    <p>Grafana, Prometheus, ELK Stack</p>
+                <div class="skill-card">
+                    <h3>Operating System</h3>
+                    <p>Red Hat Enterprise Linux, CentOS, Oracle Linux, Solaris, Ubuntu</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Oracle Application</h3>
+                    <p>Oracle EBS 11i, EBS 12.1.3, EBS</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AWS</h3>
+                    <p>EC2, S3, RDS, VPC, IAM, EBS, Cloud watch, Security groups, ELB (Load balancers), NAT, Route53, Database Migration</p>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOPS Tools</h3>
+                    <p>Jenkins, git, Puppet, Ansible, bitbucket</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database Migration</h3>
+                    <p>Ora2pg for oracle to PostgreSQL, AWS DMS, Database Pump, Oracle Standby Database, AWS DMS /Schema conversion</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Infrastructure as Code (IaC)</h3>
+                    <p>Terraform, Ansible</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Monitoring Tool</h3>
+                    <p>ELK, Emite, BMC Petrol, Oracle Grid control, Nagios, Grafana, Prometheus, MongoDB mms, Percona PMM</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Virtualization</h3>
+                    <p>VMware ESXi server, VMware server, Red Hat Virtualization</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Ware Housing (DWH)</h3>
+                    <p>MicroStrategy, SAP Business objects, IBM DataStage, Oracle Discoverer, Noetix views, Data pipelines, Data Lake, Tableau, QlikView, Informatica cloud, Pentaho Data Integration (PDI), Import and Export Data using SQOOP</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Oracle Utilities</h3>
+                    <p>RMAN, Data pump, ADDM, AWR, ASSM, ASM, SQL*Loader, DBCA, AD Utilities (Adpatch, Adadmin, adrelink etc)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Incident/Problem/Project Tracking</h3>
+                    <p>ServiceNow, Jira, Better works, Kanban</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Application Servers</h3>
+                    <p>Apache, Tomcat & WebLogic</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Security</h3>
+                    <p>SSL certificates, Oracle Wallets, Ansible vault, GPG/PGP encryption</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Containers</h3>
+                    <p>Docker, Docker compose, Docker swarm, AWS ECS, AWS ECR</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CI&CD</h3>
+                    <p>Jenkins, Shell scripts, Octopus deploy</p>
+                </div>
+                <div class="skill-card">
+                    <h3>DB tools</h3>
+                    <p>pg_basebackup, pgdump, MySQL dump, mongodb dump, expdp/impdp, pg_repack</p>
                 </div>
             </div>
         </section>
 
-        <section id="professional-experience">
-            <h2>Professional Experience</h2>
+        <section class="card" id="professional-experience">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
             <div class="experience-table">
                 <div class="experience-row header">
                     <div class="experience-cell">Organization</div>
@@ -306,25 +456,90 @@
             </div>
         </section>
 
-        <section class="section">
-            <h2>Major Achievements</h2>
-            <ul class="awards-list">
-                <li>Migrated 13-node MongoDB Sharded Cluster from AWS to on-premises/datacenter with zero downtime</li>
-                <li>Architected database layers on AWS RDS, EC2, and on-premises for high availability and scalability</li>
-                <li>End-to-end automation of database user creation and role management using ServiceNow API</li>
-                <li>Zero downtime upgrades for PostgreSQL/MySQL/AWS Aurora/RDS databases</li>
+        <section class="card" id="major-achievements">
+            <h2><i class="fas fa-trophy"></i> Major Achievements</h2>
+            <ul>
+                <li>Migrated 13 node MongoDB Sharded Cluster from AWS to on-premises / Datacenter with no DB downtime.</li>
+                <li>Migrated PostgreSQL, MySQL & Elasticsearch from AWS to on-premises / data center with minimum DB downtime.</li>
+                <li>Migrated single-node PostgreSQL to Patroni Cluster for HA (High Availability).</li>
+                <li>End to end Automation of Database user creation and role grant using ServiceNow API and shell scripts.</li>
+                <li>Zero Downtime upgrade of AWS Aurora/RDS Databases, On-premises PostgreSQL/MySQL/Elasticsearch & MongoDB.</li>
+                <li>On premises Elasticsearch to Elastic Cloud & On premises Elasticsearch to AWS Elastic Managed Service/AWS ECS.</li>
+                <li>Migrated live Oracle Databases 11g/12c to PostgreSQL 11 using ora2pg tool on replicated environment using replication manager and pgpool for high availability.</li>
+                <li>Migrated PostgreSQL, MySQL, and MongoDB from on-premises to AWS Cloud with minimum downtime.</li>
+                <li>Planned, designed, Architected Database layers on AWS RDS, EC2 & on-premises.</li>
+                <li>Introduced fast setup/deployment process using Docker/Docker swarm/AWS ECS for ELK, MySQL, PostgreSQL, MongoDB for non-production environments.</li>
+                <li>Automation of MySQL/MariaDB/MongoDB installation/upgrade using Ansible.</li>
+                <li>Implemented Jenkins code push process for Databases.</li>
+                <li>Application and database migration from on premise to AWS/Hybrid cloud using AWS DMS/S3/terraform.</li>
+                <li>End to end Planning and upgradation of nine oracle database instances from 11g to 12c for Oracle EBS 12.1.3 (Oracle ERP).</li>
+                <li>Zero downtime upgrade of 25 MongoDB Replica set nodes (dev to Prod) from 2.4 -> 2.6 -> 3.12 -> 3.6 using Manual and Ansible.</li>
+                <li>Maintained 16 Node Oracle RAC live production cluster on Netapp storage system.</li>
+                <li>Migrated 11 Live Applications and databases from BareMetal to redhat virtualization env.</li>
+                <li>Took initiation and Migrated live MariaDB production Databases to AWS/OpenShift/Hybrid cloud.</li>
+                <li>Introduced and implemented AWS Tagging Strategies to save cost and streamlined billing.</li>
+                <li>Designed and Configured AWS Redshift Cluster for data warehouse system to replace Oracle DB.</li>
+                <li>Introduced PostgreSQL/MySQL RDS/Aurora and EC2 DB instances for fast Database implementation.</li>
+                <li>Upgraded MariaDB from 10 to 10.3.6 using Ansible.</li>
+                <li>Oracle EBS(ERP) 12.1.3, Oracle EBS supporting application migration (Left and shift) from local data center to AWS.</li>
+                <li>Noetix application and database migration (Left and shift) from local data center to AWS.</li>
+                <li>Designed, Architected, Implemented and managing 20 Node Cloudera Hadoop cluster for Data Lake with Hive, Beeline and PostgreSQL.</li>
+                <li>PostgreSQL Database upgrade from 9.4 to 9.6 on RHEL 7.</li>
+                <li>Developed automated code push system using git and shell scripts.</li>
+                <li>Integrated restricted part screening Application (OCR) and B2B application (OpenText), Markview, Noetix views with Oracle EBS R12 (1.2.3).</li>
+                <li>Database Backup and clone automation using NetApp SMO command line tool.</li>
+                <li>Implemented Oracle Advance security (TDE) on databases with minimum downtime.</li>
+                <li>Implemented ELK (Elasticsearch, Logstash & Kibana) for various Applications on premises/Docker/Docker-Compose/ Docker swarm & AWS EC2.</li>
+                <li>Designed & Implemented PostgreSQL/MySQL/MongoDB monitoring using Grafana, Prometheus & exporters on premises/Docker/Docker-Compose/Docker swarm & AWS EC2.</li>
+                <li>Elasticsearch database migration from on premises to AWS EC2 & Elasticsearch Cloud (Managed Service).</li>
+                <li>PostgreSQL/MySQL Community edition to AWS Aurora migration.</li>
+                <li>Elasticsearch cross-cluster replication (CCR) setup and administration using Kibana on premises/Docker/Docker-Compose/ Docker swarm & AWS EC2.</li>
+                <li>Running PostgreSQL PG_POOL on AWS ECS and RDS PostgreSQL/Aurora PostgreSQL.</li>
+                <li>Infrastructure architecture design for cloud migration & Datacenter consolidation/ Deconsolidation.</li>
+                <li>Database & Application operational process design, workflow formation and implementation.</li>
             </ul>
         </section>
 
-        <section class="section">
-            <h2>Certifications</h2>
-            <ul class="awards-list">
-                <li>Apache Kafka Fundamentals - Confluent, April 2021</li>
-                <li>Elastic Training: Observability Fundamentals - Elastic, April 2021</li>
-                <li>Red Hat Certified System Administrator (RHCSA) - Red Hat, June 2018</li>
-                <li>Cisco Certified Network Associate (CCNA) - Cisco, November 2008</li>
+        <section class="card" id="certifications">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <ul class="certifications-list">
+                <li>
+                    <strong>Apache Kafka Fundamentals</strong><br>
+                    Confluent<br>
+                    Issued Apr 2021
+                </li>
+                <li>
+                    <strong>Elastic Training: Observability Fundamentals</strong><br>
+                    Elastic<br>
+                    Issued Apr 2021<br>
+                    Credential ID C43461
+                </li>
+                <li>
+                    <strong>How to Slow Down and Be More Productive</strong><br>
+                    Linkedin Learning Courses Review 2020<br>
+                    Issued Feb 2020<br>
+                    Credential ID AXMKPc-nxmY5IVMfBjZQTCANzBw
+                </li>
+                <li>
+                    <strong>Redhat Certified System Administrator (RHCSA)</strong><br>
+                    Red Hat<br>
+                    Issued Jun 2018<br>
+                    Credential ID 160-179-644
+                </li>
+                <li>
+                    <strong>Cisco Certified Network Associate (CCNA)</strong><br>
+                    Cisco<br>
+                    Issued Nov 2008<br>
+                    Credential ID CSCO10993296
+                </li>
+                <li>
+                    <strong>Microsoft Certified Professional (MCP)</strong><br>
+                    Microsoft
+                </li>
             </ul>
         </section>
+
+        
     </main>
 
     <footer>
