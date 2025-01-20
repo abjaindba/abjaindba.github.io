@@ -1,83 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhishek Jain - Profile</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Jain - Database Administrator & DevOps Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>👨‍💻</text></svg>">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .company {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .period {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .awards-list {
+            list-style: none;
+        }
+
+        .awards-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .awards-list li::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="favicon.ico" alt="Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="./Abhishek_Jain_dba_Dealersocket.pdf" class="download-cv" download>Download CV</a>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <img src="abhishekjain.jpg" alt="Abhishek Jain" class="profile-pic">
-        <div class="hero-text">
-          <h1>Hy! I Am <span>Abhishek Jain</span></h1>
-          <p>I design beautifully simple things, and I love what I do.</p>
-          <div class="experience">
-            <span>15+</span> YEARS EXPERIENCE
-          </div>
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/abhishek-k-jain" target="_blank">LinkedIn</a>
-            <a href="https://github.com/abjaindba" target="_blank">GitHub</a>
-          </div>
+    <header>
+        <div class="container">
+            <div class="profile-image">👨‍💻</div>
+            <h1>Abhishek Jain</h1>
+            <p class="title">Database Administrator | DevOps Specialist | Big Data Expert</p>
+            <div class="social-links">
+                <a href="mailto:abjaindba@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/abhishek-k-jain" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abjaindba" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <h2>Professional Summary</h2>
-      <p>A highly competent and result-oriented IT professional with 15+ years of expertise in Database Administration, DevOps, and the Big Data Ecosystem. Currently working as Principal DBRE at DealerSocket, managing open-source databases such as PostgreSQL, MySQL, MongoDB, and Elasticsearch along with AWS RDS and DevOps tools. Passionate about adapting DevOps culture in the DBA space with automation and efficiency practices.</p>
-    </section>
-    
-    <section>
-      <h2>Contact Information</h2>
-      <ul>
-        <li><strong>Phone:</strong> +91 7721850055</li>
-        <li><strong>Email:</strong> <a href="mailto:abjaindba@gmail.com">abjaindba@gmail.com</a></li>
-      </ul>
-    </section>
+    </header>
 
-    <section>
-      <h2>Employment History</h2>
-      <ul>
-        <li><strong>DealerSocket (Solera)</strong>, Bangalore – Principal DBRE/SRE Databases (Mar 2021 - Present)</li>
-        <li><strong>Redhat</strong>, Pune – Senior Database DBA (Dec 2014 - Mar 2021)</li>
-        <li><strong>Yahoo! India</strong>, Bangalore – Tech Lead Oracle DBA (Feb 2012 - Dec 2014)</li>
-        <li><strong>mPortal (India)</strong>, Bangalore – Senior Oracle DBA (Oct 2011 - Feb 2012)</li>
-        <li><strong>SLK Software Services</strong>, Bangalore – Senior Oracle DBA (Jul 2010 - Sep 2011)</li>
-        <li><strong>IBM India Pvt. Ltd.</strong>, Bangalore – Oracle DBA (Aug 2008 - May 2010)</li>
-        <li><strong>Bharti Comtel Ltd.</strong>, Bangalore – Project Engineer (Feb 2006 - Dec 2007)</li>
-        <li><strong>Bharti Tele Venture Ltd.</strong>, Raipur – Web Engineer (Apr 2005 - Feb 2006)</li>
-      </ul>
-    </section>
+    <main class="container">
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p>A highly competent and result-oriented IT professional with 15+ years of expertise in Database Administration, DevOps, and the Big Data ecosystem. Currently working as Principal DBRE at DealerSocket, managing open-source databases including PostgreSQL, MySQL, MongoDB, and Elasticsearch, along with AWS RDS and DevOps tools. Specializes in implementing automation and DevOps practices to optimize workflows and save DBA hours.</p>
+        </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Apache Kafka Fundamentals - Confluent, April 2021</li>
-        <li>Elastic Training: Observability Fundamentals - Elastic, April 2021 (Credential ID: C43461)</li>
-        <li>How to Slow Down and Be More Productive - LinkedIn Learning, February 2020 (Credential ID: AXMKPc-nxmY5IVMfBJbZQTCANzBw)</li>
-        <li>Red Hat Certified System Administrator (RHCSA) - Red Hat, June 2018 (Credential ID: 160-179-644)</li>
-        <li>Cisco Certified Network Associate (CCNA) - Cisco, November 2008 (Credential ID: CSCO10993296)</li>
-        <li>Microsoft Certified Professional (MCP) - Microsoft</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p> 2025 Abhishek Jain | Built with HTML & CSS</p>
-  </footer>
+        <section class="section">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <p>Oracle, PostgreSQL, MySQL/MariaDB, MongoDB, AWS RDS</p>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps Tools</h3>
+                    <p>Jenkins, Puppet, Ansible, Terraform</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <p>AWS (EC2, S3, RDS, IAM), Red Hat Virtualization</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Monitoring</h3>
+                    <p>Grafana, Prometheus, ELK Stack</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <p class="company">DealerSocket (Solera)</p>
+                    <p class="position">Principal DBRE/SRE Databases</p>
+                    <p class="period">Mar 2021 - Present</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="company">Redhat</p>
+                    <p class="position">Senior Database DBA</p>
+                    <p class="period">Dec 2014 - Mar 2021</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="company">Yahoo! India</p>
+                    <p class="position">Tech Lead Oracle DBA</p>
+                    <p class="period">Feb 2012 - Dec 2014</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Major Achievements</h2>
+            <ul class="awards-list">
+                <li>Migrated 13-node MongoDB Sharded Cluster from AWS to on-premises/datacenter with zero downtime</li>
+                <li>Architected database layers on AWS RDS, EC2, and on-premises for high availability and scalability</li>
+                <li>End-to-end automation of database user creation and role management using ServiceNow API</li>
+                <li>Zero downtime upgrades for PostgreSQL/MySQL/AWS Aurora/RDS databases</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <ul class="awards-list">
+                <li>Apache Kafka Fundamentals - Confluent, April 2021</li>
+                <li>Elastic Training: Observability Fundamentals - Elastic, April 2021</li>
+                <li>Red Hat Certified System Administrator (RHCSA) - Red Hat, June 2018</li>
+                <li>Cisco Certified Network Associate (CCNA) - Cisco, November 2008</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Abhishek Jain | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
